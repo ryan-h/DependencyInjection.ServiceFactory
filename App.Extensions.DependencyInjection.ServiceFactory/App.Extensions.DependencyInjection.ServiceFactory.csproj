@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company></Company>
+    <Authors>Ryan Heigert</Authors>
+    <Copyright>MIT</Copyright>
+    <PackageId>App.Extensions.DependencyInjection.ServiceFactory_Ryan_Heigert</PackageId>
+    <PackageProjectUrl>https://github.com/ryan-h/DependencyInjection.ServiceFactory</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ryan-h/DependencyInjection.ServiceFactory</RepositoryUrl>
+    <RepositoryType />
+    <PackageTags />
+    <Description>An extension of Microsoft.Extensions.DependencyInjection providing service factory functionality.</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>
