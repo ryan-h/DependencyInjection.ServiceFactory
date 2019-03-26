@@ -2,7 +2,7 @@
 
 An extension of `Microsoft.Extensions.DependencyInjection` providing service factory functionality for an application.
 
-A service is used as the implementation factory for the instantiation of a particular service. This can be useful in situations where the creation of a service relies on other dependencies.
+A service is used as the implementation factory for the instantiation of a particular service provided by dependency injection. This abstraction allows for the implementation code to be encapsulated into a service, and can be useful in situations where the creation of a service relies on other dependencies.
 
 ## Getting started
 
@@ -22,6 +22,8 @@ public class ExampleServiceFactory : IServiceFactory<IExampleService>
 }
 ```
 
+*Note: the `serviceProvider` is not required to be used but is included to provide access to the service container, if needed.*
+
 In *Startup.cs*, register the factory with the service collection:
 
 ```csharp
@@ -35,15 +37,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-*Note: The `serviceProvider` is not required to be used but is included to provide access to the service container, if needed.*
-
 ## Usage
 
-When another service has a dependency on `IExampleService`, the `Create()` method on the service factory will be invoked and the returned instance will be used by the container to provide the service.
+When another service has a dependency on `IExampleService`, the `Create()` method on the service factory will be invoked and the returned instance will be used by the service container to inject the service.
 
 The `Create()` method will be invoked depending on the lifetime defined for the service. For example, using the default *Singleton*, the method will only be invoked once, and the returned instance will be used for all subsequent requests. See the documentation on [service lifetimes](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.2#service-lifetimes) for more details.
-
-Basically, this extension mixes the benefits of dependency injection with the dynamic implementation of a service instance.
 
 ## Example
 
