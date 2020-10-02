@@ -2,15 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Company></Company>
     <Authors>Ryan Heigert</Authors>
-    <Copyright>MIT</Copyright>
+    <Copyright>Copyright © Ryan Heigert 2019</Copyright>
     <PackageId>App.Extensions.DependencyInjection.ServiceFactory</PackageId>
     <PackageProjectUrl>https://github.com/ryan-h/DependencyInjection.ServiceFactory</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ryan-h/DependencyInjection.ServiceFactory</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Description>An extension of Microsoft.Extensions.DependencyInjection providing service factory functionality.</Description>
-    <PackageLicenseUrl>https://github.com/ryan-h/DependencyInjection.ServiceFactory/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
